@@ -130,7 +130,12 @@ app.post("/delete", function(req, res){
 
 });
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3030;
+}
 
-app.listen(3030, function() {
+
+app.listen(port, function() {
   console.log("Server started on port 3030");
 });
