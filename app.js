@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 mongoose.connect(
-  "mongodb+srv://rasidbram:rasidbram@cluster0-hbtpq.mongodb.net/todolistDB",
+  "mongodb://localhost/todolistDB",
   { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
 );
 const itemsSchema = {
